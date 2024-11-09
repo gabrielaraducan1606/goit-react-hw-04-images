@@ -1,10 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { App } from 'components/App';
+import ReactDOM from 'react-dom';
 import './index.css';
+import App from './components/App';
+import { ImageProvider } from './components/imageContext';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+ReactDOM.render(
+  <ImageProvider>
     <App />
-  </React.StrictMode>
+  </ImageProvider>,
+  document.getElementById('root')
 );
